@@ -6,6 +6,32 @@ Create 1920 x 360 PNG marquees from your existing LaunchBox artwork. No AI gener
 
 Version 2.4.1 moves **New preview** beside the preview title and keeps both progress bars visible at all times. Independent preview focus, generation checkboxes, numbered installation preservation, live controls and recovery remain available.
 
+## Template and image sources
+
+The numbered sample below shows how existing media fills the shared template. The annotation numbers are documentation only; generated marquees remain **1920 × 360**.
+
+![Annotated marquee identifying the background, 3D box, cartridge, game logo, console image, platform logo, and page fold](docs/images/template-overview.png)
+
+[View the original sample without annotations](docs/images/sample-marquee.png).
+
+| # | Template layer | Source and fallback order |
+| --- | --- | --- |
+| 1 | Background | `Fanart - Background` → `Screenshot - Gameplay` → `Box - Front`. The global crop adjustment controls which part is visible. |
+| 2 | Box artwork | `Box - 3D` → `Box - Front` → `Box - Front - Reconstructed`. |
+| 3 | Cartridge / disc | `Cart - Front` → `Cart - 3D` → `Disc` → `Fanart - Cart - Front`. This layer is drawn over the box. |
+| 4 | Game title logo | `Clear Logo`, with the template's glow applied. A text title is used when no logo or template fallback is available. |
+| 5 | Console / device | The console artwork assigned by the bundled profile in `assets/`. Profiles without a bundled console image use `Images/Platforms/<System>/Device/`. |
+| 6 | Platform logo | In Automatic mode, `Images/Platforms/<System>/Clear Logo/` first, then installed platform-logo packs. An explicitly selected pack can take priority. |
+| 7 | Page fold / corner | Bundled template components plus the console's Paper, Fold, and Reverse palette. Original Genesis/32X corner stripes are retained. |
+
+Game media normally lives under `Images/<System>/<Media Type>/`. The generator also respects LaunchBox's configured media folders, regional subfolders, and Scrape As aliases for platform logos. Shadows, glow, scaling, and the fold are applied by the template rather than scraped as separate game images.
+
+## Application UI
+
+The actual application below displays a pre-generated sample in a **demo library**, with example paths rather than personal locations. It shows system checkboxes, independent preview focus, the color controls, **New preview** outside the artwork, and both progress bars.
+
+![Marquee Generator application showing a Sega Genesis sample, system checkboxes, live color controls, and separate overall and system progress bars](docs/images/application-ui.jpg)
+
 ## Start and preview
 
 1. Download this repository using **Code → Download ZIP**, then extract the **complete** program folder. Keep `assets`, `profiles.json`, and all Python modules together.

@@ -18,7 +18,7 @@ Export/
 Samples/
 Backups/
 LaunchBox/
-Images/
+/Images/
 Marquee backup */
 marquee-state.json
 marquee-checkpoint.json
