@@ -1,0 +1,36 @@
+# Local preferences, credentials and runtime files
+settings.json
+error.log
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.tmp
+*.log
+.marquee-operation.lock
+
+# Generated artwork, reports and machine-specific library data
+Generated/
+Export/
+Samples/
+Backups/
+LaunchBox/
+Images/
+Marquee backup */
+marquee-state.json
+marquee-checkpoint.json
+marquee-manifest.json
+restore-manifest.json
+media-report.csv
+excluded-games.csv
+copy-map.csv
+
+# Release archives and editor/OS files
+*.zip
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
