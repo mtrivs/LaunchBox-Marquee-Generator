@@ -95,13 +95,13 @@ Normal filenames are `Game Title-01.png`. Apostrophes and Windows-invalid charac
 - `marquee-checkpoint.json`: authoritative atomic recovery snapshot and current counted progress.
 - `marquee-manifest.json`: verified generated replacements and content hashes used by the review assistant. Keep it with the images if moving the export.
 
-Existing unknown files that differ from the current expected render are retained unless **Rebuild existing output files** is selected. Previously verified files edited externally are also retained and excluded from verified installation until rebuilt/verified. UI-only version updates do not invalidate otherwise unchanged 1.9.1 rendering signatures. New source media or selected logo packs can legitimately change a render signature.
+Existing unknown files that differ from the current expected render are retained unless **Regenerate existing exports** is selected. Previously verified files edited externally are also retained and excluded from verified installation until rebuilt/verified. UI-only version updates do not invalidate otherwise unchanged 1.9.1 rendering signatures. New source media or selected logo packs can legitimately change a render signature.
 
 ## Batch recovery and memory settings
 
 Open **Batch settings**:
 
-- **Save progress every (games)** defaults to 25. State/reports are also saved after a completed game when 30 seconds have passed, at system boundaries, and on Stop. The supported interval is 1Ã¢â‚¬â€œ10000.
+- **Save progress every (games)** defaults to 25. State/reports are also saved after a completed game when 30 seconds have passed, at system boundaries, and on Stop. The supported interval is 1-10000.
 - **Artwork memory cache** defaults to 128 MB per cache. Batch/shared decoded sources and the current preview's decoded sources have separate limits.
 - **Live preview memory cache** defaults to 64 MB for completed layers.
 
